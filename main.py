@@ -40,7 +40,7 @@ def main():
             drawable.draw(screen)
 
         for asteroid in asteroids:
-            if asteroid.collides_with(player) == False:
+            if asteroid.collides_with(player):
                 print("Game Over!")
                 sys.exit()
         
