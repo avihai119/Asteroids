@@ -14,6 +14,8 @@ def main():
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     game_clock = pygame.time.Clock()
 
+    background_image = pygame.image.load("assests/background.jpg").convert()
+    
     dt = 0
     running = True
 
@@ -49,7 +51,7 @@ def main():
                     shot.kill()
                     asteroid.split()
 
-        screen.fill("black")
+        screen.blit(background_image, (0, 0))
 
         for drawable in drawables:
             drawable.draw(screen)
