@@ -3,7 +3,7 @@ from constants import *
 import pygame.draw
 
 class Shot(CircleShape):
-    def __init__(self, x, y, radius):
+    def __init__(self, x, y):
         super().__init__(x, y, SHOT_RADIUS)
     
     def draw(self, screen):
